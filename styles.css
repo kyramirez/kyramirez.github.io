@@ -34,7 +34,7 @@
     align-items: center;
     text-align: center;
   
-    background-color: var(--cg-black);
+    background-color: var(--cg-blue);
     color: var(--cg-white);
     padding: 0px 0px;
   
@@ -64,12 +64,12 @@
   }
   
   .navbar a:hover {
-    color: var(--cg-blue);
+    color: var(--cg-black);
     text-decoration: underline;
   }
   
   .navbar a:active {
-    color: var(--cg-blue);
+    color: var(--cg-black);
   }
   
   .logo a {
@@ -152,7 +152,7 @@
   }
   
   .project-details a:hover {
-    color: var(--cg-blue);
+    color: var(--cg-black);
     text-decoration: underline;
   }
   
