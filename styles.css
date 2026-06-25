@@ -1,264 +1,250 @@
 :root {
-    /* variables */
-    --cg-black: rgb(30, 32, 32);
-    --cg-blue: rgb(36, 94, 255);
-    --cg-grey: rgb(243, 243, 243);
-    --cg-white: rgb(255, 255, 255);
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-  body {
-    background: var(--cg-grey);
-    position: relative;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-    font-family: monospace;
-  }
-  
-  /* CSS for navigation */
-  
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--cg-grey);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--cg-blue);
+  color: var(--cg-white);
+  padding: 12px 30px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--cg-white);
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  color: var(--cg-black);
+  text-decoration: underline;
+}
+
+.logo {
+  margin: 0;
+}
+
+.logo a {
+  font-family: Georgia, serif;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  flex: 1;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  font-family: Georgia, serif;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+  background-color: var(--cg-white);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.about-image img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0 2em;
+  background-color: var(--cg-white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item-link {
+  width: 60%;
+}
+
+.project-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-details {
+  width: 40%;
+  padding: 30px;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-details a {
+  color: var(--cg-black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 800px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--cg-white);
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--cg-black);
+  border: none;
+  color: var(--cg-white);
+  font-family: monospace;
+  padding: 10px 14px;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--cg-blue);
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--cg-white);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+textarea {
+  height: 150px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
   .navbar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 7%;
-    z-index: 10;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  
-    background-color: var(--cg-blue);
-    color: var(--cg-white);
-    padding: 0px 0px;
-  
-    /* Debug border */
-    /* border: solid red; */
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   .nav-list {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    right: 30px;
-    list-style: none;
-  
-    /* Debug border */
-    /* border: solid blue; */
-  }
-  
-  .navbar a {
-    color: var(--cg-white);
-    font-weight: bold;
-    margin: 0 12px;
-    text-decoration: none;
-    letter-spacing: 2px;
-  
-    font-family: monospace;
-  }
-  
-  .navbar a:hover {
-    color: var(--cg-black);
-    text-decoration: underline;
-  }
-  
-  .navbar a:active {
-    color: var(--cg-black);
-  }
-  
-  .logo a {
-    font-family: Georgia;
-  }
-  
-  .logo a:hover {
-    text-decoration: None;
-  }
-  
-  main {
-    padding: 0 20px 40px 20px;
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
   }
-  
-  .page-title {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    font-family: Georgia;
-  }
-  
-  /* CSS for portfolio grid */
-  
+
+  .about,
   .project {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    margin: 1em 0 2em 0;
-  
-    /* Debug border */
-    /* border: 2px solid blue; */
-  }
-  
-  .item-link {
-    width: 70%;
-  
-    /* Debug border */
-    /* border: 2px solid red; */
-  }
-  
-  .project-image {
-    object-fit: cover;
-    width: 100%;
-    height: 500px;
-    flex-basis: 50px;
-    flex-grow: 2;
-  
-    /* Debug border */
-    /* border: 2px solid black; */
-  }
-  
-  .project-details {
-    display: flex;
-    background-color: var(--cg-white);
-    width: 30%;
-    height: 500px;
-    flex-shrink: 1;
-    padding: 0 20px;
-    margin: 0px;
-    line-height: 1.5;
-    overflow: scroll;
-  
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  
-    /* Debug border */
-    /* border: 2px solid green; */
   }
-  
-  .project-details a {
-    color: var(--cg-black);
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-  
-  .project-details a:hover {
-    color: var(--cg-black);
-    text-decoration: underline;
-  }
-  
+
+  .item-link,
   .project-details {
-    font-weight: lighter;
-  }
-  
-  .project-name {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  /* CSS for home page */
-  
-  .about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .about-image img {
-    max-width: 300px;
-    border-radius: 3px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-  }
-  
-  .about-text {
-    flex: 1;
-    margin-left: 20px;
-  }
-  
-  .about-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .about-text p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  /* CSS for resume page */
-  
-  .button {
-    background-color: var(--cg-black);
-    border: none;
-    color: var(--cg-white);
-  
-    font-family: monospace;
-  
-    padding: 5px 7px;
-    text-align: center;
-  
-    border-radius: 2px;
-  }
-  
-  .button:hover {
-    background-color: var(--cg-blue);
-  }
-  
-  .resume h2 {
-    font-family: Georgia;
-  }
-  
-  /* CSS for contact form */
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-family: Georgia;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    resize: none;
   }
-  
-  /* Add some spacing to the form */
-  form {
-    width: 500px;
-    margin: 0 auto;
-  }
-  
-  /* CSS for footer */
-  
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cg-black);
-    color: var(--cg-white);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-  }
+}
