@@ -172,8 +172,8 @@ main {
 
 .hero-image-card {
   /*  flex: 0 0 320px; */
-  width: 250px;
-  height: 300px;
+  width: 280px;
+  height: 350px;
   /* background: var(--white); */
   border-radius: 20px;
   overflow: hidden;
