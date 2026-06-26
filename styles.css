@@ -172,8 +172,8 @@ main {
 
 .hero-image-card {
   flex: 0 0 320px;
-  width: 60px;
-  height: 80px;
+  width: 80px;
+  height: 100px;
   /* background: var(--white); */
   border-radius: 20px;
   overflow: hidden;
@@ -181,8 +181,8 @@ main {
 }
 
 .hero-image-card img {
-  width: 60px;
-  height: 80px;
+  width: 80px;
+  height: 100px;
   object-fit: cover;
   display: block;
 }
