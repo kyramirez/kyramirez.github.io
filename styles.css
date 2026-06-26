@@ -365,7 +365,7 @@ main {
     flex-wrap: wrap;
   }
 
-  .projects-container {
+  .projects-grid {
     /* to center */
     max-width: 1200px;
     margin: 40px auto;
