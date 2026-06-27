@@ -259,6 +259,17 @@ main {
   margin-bottom: 18px;
 }
 
+.projects-grid {
+  /* to center */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
 .mini-tags {
   display: flex;
   flex-wrap: wrap;
@@ -363,12 +374,5 @@ main {
 
   .social-row {
     flex-wrap: wrap;
-  }
-
-  .projects-grid {
-    /* to center */
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 30px;
   }
 }
