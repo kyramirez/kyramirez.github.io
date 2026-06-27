@@ -216,6 +216,17 @@ main {
   gap: 26px;
 }
 
+.projects-grid {
+  /* to center */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
 .home-project-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -257,17 +268,6 @@ main {
 .home-project-card p {
   line-height: 1.6;
   margin-bottom: 18px;
-}
-
-.projects-grid {
-  /* to center */
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 30px;
-  margin-bottom: 30px;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: all 0.25s ease;
 }
 
 .mini-tags {
