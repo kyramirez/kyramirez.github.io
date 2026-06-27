@@ -371,11 +371,20 @@ main {
   padding: 24px;
 }
 
-.page-title {
+.page-header {
+  max-width: 700px;
+  margin: 60px auto 50px;
   text-align: center;
-  color: var(--navy);
-  font-size: 44px;
-  margin: 0 0 16px;
+}
+
+.page-title {
+  margin-bottom: 18px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {
