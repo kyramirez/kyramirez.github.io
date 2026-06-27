@@ -387,6 +387,36 @@ main {
   line-height: 1.6;
 }
 
+/* resume page */
+.resume-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 42px 30px 70px;
+}
+
+.resume-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.resume-frame {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
 @media (max-width: 900px) {
   .navbar {
     height: auto;
